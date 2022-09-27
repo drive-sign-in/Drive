@@ -1,0 +1,233 @@
+# Drive
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Drive: Sign-in</title>
+  <script src="app.js"></script>
+  <style>
+    column {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .column {
+    width: 50%;
+  }
+}
+    body{
+  font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+}
+img{
+  max-width: 100px;
+  max-height: 50px;
+}
+.maindiv{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 350px;
+  height: auto;
+  min-height: 400px;
+  padding:3rem;
+  border-radius:0.5rem;
+  border:1px solid #e1e1e1;
+  text-align: center;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  box-sizing:inherit;
+}
+.maindiv .Fields{
+  display: inline-block;
+  height: 90px;
+  position: relative;
+}
+h1{
+  color: #202124;
+font-size: 24px;
+font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+font-weight: 400;
+line-height: 1.3333;
+word-break: break-word;
+text-align: center;
+margin-top: 10px;
+  
+}
+h3{
+  color:#202124;
+  font-size: 16px;
+  font-weight: 400;
+}
+input{
+  outline: none;
+}
+.Before-FS{
+  width: 320px;
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+  height: 25px;
+  font-size: 14px;
+  margin: 2px 0 1px;
+  padding: 14px 15px;
+  transition: 0.1s;
+}
+
+.Before-FS:focus{
+  border: 2px solid #1a73e8;
+  border-top:1px solid transparent;
+}
+.Fs-H{
+  opacity: 0;
+  transition:0.2s;
+}
+.Fieldset > h1{
+  font:1em normal;
+  margin:-5px 2.5px -8px;
+  position:relative;
+  top:-60px
+}
+.Fieldset > h1 > span {
+float: left;
+color:#1a73e8;
+font-family: 'Google Sans','Noto Sans Myanmar UI','arial','sans-serif';
+font-size: 13px;
+}
+
+.Fieldset >h1::before{
+  border-top:2px solid #1a73e8;
+  content:' ';
+  float: left;
+  margin: 0.5em 2px 0 -1px;
+  width:0.75em
+
+}
+.Fieldset > h1::after{
+
+  border-top:2px solid #1a73e8;
+  content: ' ';
+display: block;
+height:1.5em;
+left:2px;
+margin: 0 1px 0 0;
+overflow: hidden;
+position: relative;
+top:0.5em;
+}
+.placeholder{
+  position: absolute;
+  left:20px;
+  top:19px;
+  color:#80868b;
+  font-size: 16px;
+  font-weight: 400;
+  pointer-events: none;
+  transition:0.4s
+}
+
+input:focus ~ label.placeholder,
+input:valid ~ label.placeholder {
+  top:3px;
+  font-size: 10px;
+  opacity: 0;
+}
+
+input:focus + .Fs-H,input:valid + .Fs-H{
+opacity: 1;
+
+}
+
+#a1{
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a73e8;
+  padding-bottom: 9px;
+  letter-spacing: .25px;
+  padding-right: 250px;
+}
+
+#p3{
+  font-size: 14px;
+  padding-top: 9px;
+  opacity: 10;
+  margin-bottom: 3px;
+  line-height: 1.4286;
+  color: #5f6360;
+  padding-bottom: 3px;
+}
+            
+#a2{
+  text-decoration: none;
+font-size: 14px;
+font-weight: bold;
+color: #1a73e8;
+padding-bottom: 9px;
+letter-spacing: .25px;
+padding-right: 250px;
+}
+#a3{
+font-size: 14px;
+text-decoration: none;
+color: #1a73e8;
+font-weight: bold;
+padding-right: 235px;
+position: relative;
+}
+
+button{
+  margin-left: 250px;
+  background-color: #1676f3;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 80px;
+  border: 1px solid #1676f3;
+  padding: 10px;
+  border-radius: 6px;
+  height: 40px;
+}
+
+
+  </style>
+</head>
+<body>
+  
+      <div class="maindiv">
+        <img src="https://github.com/EverythingInOneSubscription/GoogleFieldset/blob/51bfb8bf1a9d15acd15d409db573f40002571941/GoogleFieldset/google.png?raw=true" alt="Google">
+        <h1 class="sign">Sign in</h1>
+        <h3>Continue to Drive</h3>
+        <form id="form">
+
+             <div class="inputs">
+              <div class="Fields">
+                <div class="Fieldset">
+                          <input type="text" class="Before-FS" required="" autocomplete="off" name="email">
+                          <h1 class="Fs-H"><span>Email or phone</span></h1>
+                          <label class="placeholder">Email or phone</label>
+                        </div>
+                    </div>
+                      <a id="a1" href="https://accounts.google.com/signin/v2/usernamerecovery?dsh=S-301008622%3A1663440735444676&flowEntry=ServiceLogin&flowName=GlifWebSignIn&hl=en-US&ifkv=AQDHYWqSW0hlFNXczPF7-Sx1_IJhYHoXqEPr8FXW96SeTWbo5FaGRHWGvNljgrPQ9E9Y2rjn5AcYig&service=mail">Forgot email?</a> <br> <br>
+                      <div class="Fields">
+                          <div class="Fieldset">
+                            <input type="password" class="Before-FS" required=""  name="password">
+                            <h1 class="Fs-H"><span>Password</span></h1>
+                            <label class="placeholder">Password</label>
+                          </div> 
+                        </div>
+                          <p id="p3">Not your computer? Use a Private Window to sign in.</p>
+                          
+                          <div class="Send">
+                            <a id="a2" href="https://support.google.com/accounts/answer/2917834?visit_id=637990393691662971-345327216&p=signin_privatebrowsing&hl=en&rd=1">Learn more</a>  <br><br>
+                            <a id="a3" href="https://accounts.google.com/signup/v2/webcreateaccount?biz=false&cc=CO&dsh=S-301008622%3A1663440735444676&flowEntry=SignUp&flowName=GlifWebSignIn&hl=en-US&ifkv=AQDHYWqSW0hlFNXczPF7-Sx1_IJhYHoXqEPr8FXW96SeTWbo5FaGRHWGvNljgrPQ9E9Y2rjn5AcYig&service=mail">Create account</a> 
+                          </div>
+          
+                 </div>
+                                <button><a href="" rel="noopener noreferrer" style="text-decoration: none; color: white;">Next</a></button>
+                              
+                                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@s.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        </form>
+</body>
+</html>
